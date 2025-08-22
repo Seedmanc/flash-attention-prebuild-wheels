@@ -8,7 +8,7 @@ on:
 jobs:
   create_releases:
     name: Create Releases
-    runs-on: windows-2022
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
       - name: Create Release
@@ -119,7 +119,7 @@ jobs:
     #   [build_wheels_linux, build_wheels_linux_self_hosted, build_wheels_windows]
     needs: [build_wheels_windows_code_build]
     if: always()
-    runs-on: windows-2022
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v4
 
