@@ -15,8 +15,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "${{ github.ref_name }}" \
-            --title "${{ github.ref_name }}" \
+          gh release create "${{ github.ref_name }}1" \
+            --title "${{ github.ref_name }}1" \
             --notes "TBD"
 
   # #########################################################
