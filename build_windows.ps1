@@ -68,6 +68,7 @@ $env:FLASH_ATTENTION_FORCE_BUILD = "TRUE"
 $env:NVCC_FLAGS = "-w --disable-warnings"
 $env:CXXFLAGS = "/w"
 $env:CFLAGS = "/w"
+$env:FLASH_ATTN_CUDA_ARCHS = 128
 
 cd flash-attention
 python setup.py bdist_wheel --dist-dir=dist
