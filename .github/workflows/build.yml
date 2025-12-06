@@ -14,6 +14,7 @@ jobs:
       - name: Create Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FLASH_ATTN_CUDA_ARCHS: 128
         run: |
           gh release create "${{ github.ref_name }}0" \
             --title "${{ github.ref_name }}0" \
@@ -28,11 +29,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        flash-attn-version: ["2.7.4"]
+        flash-attn-version: ["2.8.3"]
         python-version: ["3.10"]
-        torch-version: ["2.9.0"]
+        torch-version: ["2.9.1"]
         #https://developer.nvidia.com/cuda-toolkit-archive
-        cuda-version: ["12.8.0"]
+        cuda-version: ["12.8.1"]
         exclude:
           #torch < 2.2 does not support Python 3.12
           - python-version: "3.12"
