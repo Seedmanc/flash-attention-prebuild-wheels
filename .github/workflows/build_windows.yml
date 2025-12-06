@@ -29,8 +29,8 @@ jobs:
     name: Build wheels and Upload (Windows x86_64, GitHub hosted runner, ${{ inputs.flash-attn-version }}, ${{ inputs.python-version }}, ${{ inputs.torch-version }}, ${{ inputs.cuda-version }})
     runs-on: windows-2022
     env:
-      MAX_JOBS: 2
-      NVCC_THREADS: 2
+      MAX_JOBS: 8
+      NVCC_THREADS: 8
     steps:
       - uses: actions/checkout@v4
 
